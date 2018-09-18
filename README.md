@@ -1,9 +1,8 @@
 # SnowFlake
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/snow_flake`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
-
+This is a gem can generate ID using SnowFlake. The advantage of SnowFlake is that it is sorted by time increment on the whole, and there is no ID collision
+(distinguished by data center ID and machine ID) in the whole distributed system, and it is more efficient.
+After testing, SnowFlake can generate about 260,000 IDs per second
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -22,7 +21,10 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+example
+```ruby
+SnowFlake::ID.new(0, 0).next_id
+```
 
 ## Development
 
